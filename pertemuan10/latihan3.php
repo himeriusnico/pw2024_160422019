@@ -19,22 +19,16 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
     <tr>
       <th>#</th>
       <th>Gambar</th>
-      <th>NRP</th>
       <th>Nama</th>
-      <th>Email</th>
-      <th>Jurusan</th>
       <th>Aksi</th>
     </tr>
     <?php foreach ($mahasiswa as $m) : ?>
       <tr>
         <td><?= $m['id']; ?></td> <!--atau buat variable diatas di sebelum foreach $i =1, lalu di dalam tag td nya dollarM diganti dollari++-->
         <td><img src="images/<?= $m['gambar']; ?>" width=" 80"></td>
-        <td><?= $m['nrp']; ?></td>
         <td><?= $m['nama']; ?></td>
-        <td><?= $m['email']; ?></td>
-        <td><?= $m['jurusan']; ?></td>
         <td>
-          <a href="">ubah</a> | <a href="">hapus</a>
+          <a href="detail.php?id=<?= $m['id']; ?>">Lihat Detail</a>
         </td>
       </tr>
     <?php endforeach; ?>
