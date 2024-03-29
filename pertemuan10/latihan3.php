@@ -15,6 +15,8 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 <body>
   <h3>Daftar Mahasiswa Ubaya</h3>
 
+  <a href="tambah.php">Tambah data mahasiswa</a>
+  <br>
   <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>#</th>
