@@ -49,9 +49,10 @@ $mahaiswa = $rows; -->
       <th>Jurusan</th>
       <th>Aksi</th>
     </tr>
-    <?php foreach ($mahaiswa as $m) : ?>
+    <?php $i = 1;
+    foreach ($mahasiswa as $m) : ?>
       <tr>
-        <td><?= $m['id']; ?></td> <!--atau buat variable diatas di sebelum foreach $i =1, lalu di dalam tag td nya dollarM diganti dollari++-->
+        <td><?= $i++; ?></td> <!--atau buat variable diatas di sebelum foreach $i =1, lalu di dalam tag td nya dollarM diganti dollari++-->
         <td><img src="images/<?= $m['gambar']; ?>" width=" 80"></td>
         <td><?= $m['nrp']; ?></td>
         <td><?= $m['nama']; ?></td>
