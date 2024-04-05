@@ -85,3 +85,24 @@ function ubah($data)
   //untuk memberitahu ada baris yang berubah di baris
   return mysqli_affected_rows($db);
 }
+
+function login($data)
+{
+  $db = koneksi();
+
+  $username = htmlspecialchars($data['username']);
+  $password = htmlspecialchars($data['password']);
+
+  if ($username == 'admin' && $password == '12345') {
+    //set session
+
+    $_SESSION['login'] = true;
+    header("Location: index.php");
+    exit;
+  } else {
+    return [
+      'error' => true,
+      'pesan' => 'Username / Password Salah!'
+    ];
+  }
+}
